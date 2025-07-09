@@ -7,13 +7,28 @@ import { Check } from "lucide-react";
 import Image from "next/image";
 
 export default function Home() {
-  return (<>
-    <Button>Bismi Lah</Button>
-    <p className="text-rose-500">Alhamduli Lah</p>
-    <Input placeholder="Enter your name" />
-    <Textarea placeholder="Enter your message" />
-    <Checkbox/>
-    <Progress value={50} className="w-full" />
-    </>
+
+  return (
+    <div className="p-4">
+      <div className="flex flex-col gap-y-4">
+        <div>
+        <Button variant="elevated">
+          Bismi Lah
+        </Button>
+        </div>
+        <div>
+          <Progress value={50} />
+        </div>
+        <div>
+          <Input placeholder="Enter your name" />
+        </div>
+        <div>
+          <Textarea placeholder="Enter your message" />
+        </div>
+        <div>
+          <Checkbox/>
+        </div>
+      </div>
+    </div>
   );
 }
