@@ -7,7 +7,7 @@ import { Checkbox } from "@/components/ui/checkbox";
 
 export default function home() {
   return (
-      <div className="flex flex-col gap-y-4">
+      <div className="flex flex-col gap-y-4 ">
         <div>
         <Button variant="elevated">
           Bismi Lah
