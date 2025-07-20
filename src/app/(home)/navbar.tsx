@@ -1,5 +1,6 @@
 import { Poppins } from "next/font/google";
 import Link from "next/link";
+import { usePathname } from "next/navigation"
 
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
@@ -41,6 +42,8 @@ const navbarItems = [
 ];
 
 export const Navbar = () => {
+    const pathname = usePathname();
+
     return(
         <nav className="h-20 border-b flex justify-between font-medium bg-white">
             <Link href="/" className="pl-6 flex items-center">
