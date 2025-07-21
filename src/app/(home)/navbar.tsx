@@ -1,3 +1,5 @@
+"use client";
+
 import { Poppins } from "next/font/google";
 import Link from "next/link";
 import { usePathname } from "next/navigation"
@@ -54,7 +56,11 @@ export const Navbar = () => {
 
             <div className="items-center gap-4 hidden lg:flex">
                 {navbarItems.map((item) => (
-                    <NavbarItem key={item.href} href={item.href}>
+                    <NavbarItem
+                    key={item.href}
+                    href={item.href}
+                    isActive={pathname === item.href}
+                    >
                     {item.children}
                     </NavbarItem>
                 ))}
@@ -62,4 +68,3 @@ export const Navbar = () => {
         </nav>
     );
 };
-/* cn() maybe not helping in here */
