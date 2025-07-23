@@ -3,9 +3,12 @@
 import { Poppins } from "next/font/google";
 import Link from "next/link";
 import { usePathname } from "next/navigation"
+import { useState } from "react";
+import { MenuIcon } from "lucide-react";
 
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
+import { NavbarSidebar } from "./navbar-sidebar";
 
 interface NavbarItemProps {
     href: string,
@@ -45,8 +48,9 @@ const navbarItems = [
 
 export const Navbar = () => {
     const pathname = usePathname();
+    const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
-    return(
+    return (
         <nav className="h-20 border-b flex justify-between font-medium bg-white">
             <Link href="/" className="pl-6 flex items-center">
                 <span className={cn("text-5xl font-bold", poppins.className)}>
@@ -78,6 +82,23 @@ export const Navbar = () => {
                     </Link>
                 </Button>
             </div>
+
+            <div className="lg:hidden flex items-center justify-center">
+                <Button
+                    asChild
+                    variant="ghost"
+                    className="size-12 border-transparent bg-white"
+                    onClick={() => setIsSidebarOpen(true)}
+                >
+                    <MenuIcon></MenuIcon>
+                </Button>
+            </div>
+
+            <NavbarSidebar
+                items={navbarItems}
+                open={isSidebarOpen}
+                onOpenChange={setIsSidebarOpen}
+            />
         </nav>
     );
 };
