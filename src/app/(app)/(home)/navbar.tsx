@@ -69,7 +69,7 @@ export const Navbar = () => {
                     </NavbarItem>
                 ))}
             </div>
-
+ 
             <div className="hidden lg:flex">
                 <Button asChild variant="secondary" className="border-l border-t-0 border-b-0 border-r-0 rounded-none h-full bg-white px-12 text-lg hover:bg-pink-400 transition-colors">
                     <Link href="/sign-in">

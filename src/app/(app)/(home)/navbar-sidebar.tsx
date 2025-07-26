@@ -38,7 +38,7 @@ export const NavbarSidebar = ({
                             <Link
                                 key={item.href}
                                 href={item.href}
-                                className="w-full text-left p-4 hover:bg-black hover:text-white text-base font-medium flex items-center"
+                                className="w-full text-left p-4 hover:bg-black hover:text-white text-base font-medium flex"
                                 onClick={() => onOpenChange(false)}
                             >
                                {item.children}
@@ -46,13 +46,13 @@ export const NavbarSidebar = ({
                         ))}
                         <div className="border-t">
                             <Link href="/sign-in" 
-                            className="w-full text-left p-4 hover:bg-black hover:text-white text-base font-medium flex items-center"
+                            className="w-full text-left p-4 hover:bg-black hover:text-white text-base font-medium flex "
                             onClick={() => onOpenChange(false)}
                             >
                             Log in
                             </Link>
                             <Link href="/sign-up"
-                            className="w-full text-left p-4 hover:bg-black hover:text-white text-base font-medium flex items-center"
+                            className="w-full text-left p-4 hover:bg-black hover:text-white text-base font-medium flex"
                             onClick={() => onOpenChange(false)}
                             >
                             Start selling

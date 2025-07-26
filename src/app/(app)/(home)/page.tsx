@@ -9,7 +9,7 @@ export default function home() {
   return (
       <div className="flex flex-col gap-y-4 p-2">
         <div>
-        <Button variant="elevated">
+        <Button variant="elevated" className="">
           Bismi Lah
         </Button>
         </div>
